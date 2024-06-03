@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Recarga.Models.Recarga"
+             Title="Recarga">
+    <VerticalStackLayout Spacing="10" Margin="40">
+        <Label Text="" />
+        <Label Text="" />
+        <Label Text="" />
+        <Label Text="" />
+        <Label Text="" />
+        <Label Text="Ingrese el numero de telefono" HorizontalOptions="Center"/>
+        <Editor x:Name="TextEditor"
+                Placeholder="Ingrese el numero de telefono"
+                Text="{Binding Text}"
+                WidthRequest="600"
+                HeightRequest="50" />
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*" />
+                <RowDefinition />
+                <RowDefinition Height="100" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Label Text="Seleccione su operadora" />
+            
+            
+            <StackLayout 
+                 Grid.Column="2">
+                <Label Text="Seleccione el valor de la recarga" />
+                <RadioButton Content="$1" />
+                <RadioButton Content="$3" />
+                <RadioButton Content="$5" />
+                <RadioButton Content="$10"
+                 IsChecked="true" />
+            </StackLayout>
+        </Grid>
+        <Button Text="Recargar"
+        Clicked="SaveButton_Clicked"
+        />
+    </VerticalStackLayout>
+</ContentPage>
