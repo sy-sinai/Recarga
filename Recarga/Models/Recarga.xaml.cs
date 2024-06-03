@@ -10,7 +10,7 @@ public partial class Recarga : ContentPage
 	}
     async void SaveButton_Clicked(object sender, EventArgs args)
     {
-        
+  
         bool answer = await DisplayAlert("Confirmacion", "Desea recargar", "Si", "No");
         Debug.WriteLine("Answer: " + answer);
 
@@ -21,7 +21,10 @@ public partial class Recarga : ContentPage
 
         }
 
-
+        
+       StreamWriter archivo = new StreamWriter(@"C:\Users\laboratorio\source\repos\Recarga\Recarga\Archivos\",true);
+        await archivo.WriteLineAsync();
+        archivo.Close();
 
 
     }
