@@ -26,9 +26,20 @@
                 <ColumnDefinition />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <Label Text="Seleccione su operadora" />
             
-            
+
+            <Picker x:Name="picker"
+             Title="Seleccione su operadora">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Tuenti</x:String>
+                        <x:String>Movistar</x:String>
+                        <x:String>Maxiplus</x:String>
+                        <x:String>Claro</x:String>
+                                            </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
             <StackLayout 
                  Grid.Column="2">
                 <Label Text="Seleccione el valor de la recarga" />
