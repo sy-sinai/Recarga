@@ -10,8 +10,11 @@ public partial class Recarga : ContentPage
 	}
     async void SaveButton_Clicked(object sender, EventArgs args)
     {
+        
         bool answer = await DisplayAlert("Confirmacion", "Desea recargar", "Si", "No");
         Debug.WriteLine("Answer: " + answer);
+
+      
         if (answer=true)
         {
             await DisplayAlert("Operacion finalizada", "Recarga exitosa", "OK");
